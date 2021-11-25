@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -24,5 +25,13 @@ public class Hotels {
     @Column(name = "address")
     private String address;
 
+    @Column(name = "phone_numbers")
+    private String phone_numbers;
+
+    @Column(name = "features")
+    private String features;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<RoomType> roomTypes;
 
 }
