@@ -11,4 +11,9 @@ public class MainController {
         return ("test");
     }
 
+    @GetMapping(value = "/secondPage")
+    public String secondPage(){
+        return ("secondPage");
+    }
+
 }
