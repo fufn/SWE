@@ -20,9 +20,6 @@ public class DataBaseBean{
     private RoomTypeRepository roomTypeRepository;
 
     @Autowired
-    private FeaturesRepository featuresRepository;
-
-    @Autowired
     private PhoneNumbersRepository phoneNumbersRepository;
 
     public List<Hotels> getAllHotels(){

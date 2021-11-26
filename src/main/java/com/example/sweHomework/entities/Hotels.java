@@ -26,13 +26,10 @@ public class Hotels {
     @Column(name = "address")
     private String address;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
     private List<PhoneNumber> phone_numbers;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    private List<Feature> features;
-
-    @ManyToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
     private List<RoomType> roomTypes;
 
 }
