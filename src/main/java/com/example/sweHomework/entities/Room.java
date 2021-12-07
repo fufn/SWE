@@ -14,8 +14,12 @@ import javax.persistence.*;
 public class Room {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
     @Column(name = "number")
-    private Long number;
+    private int number;
 
     @Column(name = "floor")
     private int floor;
