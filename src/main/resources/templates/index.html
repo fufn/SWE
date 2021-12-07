@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Hotels</title>
+	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light justify-content-center" id="navigation">
+    	<div class="col-lg-1 navbar-nav-logo">
+    		<!-- <a href="">
+    			<img class="text-logo" src="images/logo/logotext.png">
+    		</a> -->
+    	</div>
+    	<div class="col-lg-11 navbar-nav-center">
+    		<ul class="navbar-nav">
+    			<li class="nav-item">
+    				<a class="nav-link active" aria-current="page" href="#carousel">Main</a>
+    			</li>
+    			<li class="nav-item">
+    				<div class="dropdown">
+    					<a class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Find a Hotel</a>
+    					<ul class="dropdown-menu">
+    						<li><a class="dropdown-item" href="#">Golden Rose Antalya</a></li>
+    						<li><a class="dropdown-item" href="#">Golden Rose Dubai</a></li>
+    						<li><a class="dropdown-item" href="#">Golden Rose Nur-Sultan</a></li>
+    						<li><a class="dropdown-item" href="#">Golden Rose Paris</a></li>
+    						<li><a class="dropdown-item" href="#">Golden Rose California</a></li>
+    					</ul>
+    				</div>
+    			</li>
+    			<li class="nav-item">
+    				<a href="">
+    					<img class="square-logo" src="images/logo/logo.png">
+    				</a>
+    			</li>
+    			<li class="nav-item">
+    				<a class="nav-link" href="#about">About Us</a>
+    			</li>
+    			<li class="nav-item">
+    				<a class="nav-link" href="#contact">Contact Us</a>
+    			</li>
+    		</ul>
+    	</div>
+    	<div class="col-lg-1 navbar-nav-right">
+    		<a class="nav-link login" href="">
+    			Make a reservation
+    		</a>
+    	</div>
+    </nav>
+
+	<section style="height: 800px; width: 100%;" id="carousel">
+      <div id="demo" class="carousel slide h-100" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="images/hotels/kazion.jpg" alt="Antalya" class="d-block">
+            <div class="hotel-info">
+              <h1>
+                Golden Rose Antalya
+              </h1>
+              <a href="">More info →</a>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="images/hotels/green.jpg" alt="Dubai" class="d-block">
+            <div class="hotel-info">
+              <h1>
+                Golden Rose Dubai
+              </h1>
+              <a href="">More info →</a>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="images/hotels/purple.jpg" alt="Nur-Sultan" class="d-block">
+            <div class="hotel-info">
+              <h1>
+                Golden Rose Nur-Sultan
+              </h1>
+              <a href="">More info →</a>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="images/hotels/paris.jpg" alt="California" class="d-block">
+            <div class="hotel-info">
+              <h1>
+                Golden Rose Paris
+              </h1>
+              <a href="">More info →</a>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="images/hotels/california.jpg" alt="California" class="d-block">
+            <div class="hotel-info">
+              <h1>
+                Golden Rose California
+              </h1>
+              <a href="">More info →</a>
+            </div>
+          </div>
+          <div class="overlay">
+
+          </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+	<div class="info-part">
+		<section class="info" id="about">
+        	<div class="section-title">
+        		<h3>
+        			About us
+        		</h3>
+        	</div>
+        	<div class="hotels-tabs">
+        		<div class="d-flex justify-content-center">
+        		  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        		    <button class="nav-link active" id="v-pills-hotel1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-hotel1" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Antalya</button>
+        		    <button class="nav-link" id="v-pills-hotel2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-hotel2" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">dubai</button>
+        		    <button class="nav-link" id="v-pills-hotel3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-hotel3" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">nur-sultan</button>
+        		    <button class="nav-link" id="v-pills-hotel4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-hotel4" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">paris</button>
+        		    <button class="nav-link" id="v-pills-hotel5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-hotel5" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">california</button>
+        		  </div>
+        		  <div class="tab-content" id="v-pills-tabContent">
+        		    <div class="tab-pane fade show active" id="v-pills-hotel1" role="tabpanel" aria-labelledby="v-pills-hotel1">
+        		    	<h4>Golden Rose Antalya</h4>
+        		    	<p class="hotel-information">
+        		    		Our 2 story building is available with its 3 single, 3 double rooms. You will find sitting area, dance floor and Avanti Cafe, Rose Restaurant, a la carte restaurants and also shops. Furthermore you find on the the lower floor conference rooms for meetings or celebrations, spa, cinema, bowling, internet cafe. The disco is downstairs located. If you allow, you can spend your time in our indoor pool or bar
+        		    		<br>
+        		    		<br>
+        		    		From here, the distance to the center of Antalya is 15 km, to the airport 10 km and to the beach 0 m.
+        					<br>
+        		    		<br>Area: 40.000 m2
+        					<br>Category: 5 Stars
+        					<br>Year of construction: 2005
+
+        		    	</p>
+        			</div>
+        		    <div class="tab-pane fade" id="v-pills-hotel2" role="tabpanel" aria-labelledby="v-pills-hotel2">
+        			    <h4>Golden Rose Dubai</h4>
+        		    	<p class="hotel-information">
+        		    		Golden Rose Dubai is the perfect choice for a holiday with your family, friends or partner. The building is a modern and impressive tower housing elegant residences, an outdoor space with a swimming pool and hot tub, as well as a fully equipped fitness studio.
+        		    		<br>
+        		    		<br>
+        		    		The 253 comfortable apartments are just a few minutes from the beach and The Walk, and close to the Palm Jumeirah, the perfect location for discovering the charms of the Arabian Peninsula.
+        					<br>
+        		    		<br>Area: 40.000 m2
+        					<br>Category: 5 Stars
+        					<br>Year of construction: 2015
+
+        		    	</p>
+        			</div>
+        		    <div class="tab-pane fade" id="v-pills-hotel3" role="tabpanel" aria-labelledby="v-pills-hotel3">
+        		    	<h4>Golden Rose Nur-Sultan</h4>
+        		    	<p class="hotel-information">
+        		    		We're a short walk from Astana Opera and less than two kilometers from Khan Shatyr Entertainment Center and Baiterek Tower. Kazakhstan Central Concert Hall, the Palace of Peace and Reconciliation, and Nur-Sultan city center are within six kilometers of our door. Enjoy our 24-hour fitness center, all-day restaurant, and 24-hour shop.
+        		    		<br>
+        		    		<br>
+        		    		From here, the distance to the center of Nur-Sultan is 4 km, to the airport 15 km.
+        					<br>
+        		    		<br>Area: 20.000 m2
+        					<br>Category: 5 Stars
+        					<br>Year of construction: 2017
+
+        		    	</p>
+        		    </div>
+        		    <div class="tab-pane fade" id="v-pills-hotel4" role="tabpanel" aria-labelledby="v-pills-hotel4">
+        		    	<h4>Golden Rose Paris</h4>
+        		    	<p class="hotel-information">
+        		    		Guest rooms at Golden Rose Paris have a distinctly chic European look, with Versailles-style fixtures and luxury romantic décor. Red Rooms are sophisticated and modern while the splurge-worthy Louis XV Suite features chandeliers and oversized bathtubs. Paris offers an abundance of opulent, elegant and amazingly flexible meeting spaces to answer any need.
+        		    		<br>
+        		    		<br>
+        		    		Few minutes from the center of Paris.
+        					<br>
+        		    		<br>Area: 30.000 m2
+        					<br>Category: 5 Stars
+        					<br>Year of construction: 2008
+
+        		    	</p>
+        			</div>
+        		    <div class="tab-pane fade" id="v-pills-hotel5" role="tabpanel" aria-labelledby="v-pills-hotel5">
+        		    	<h4>Golden Rose California</h4>
+        		    	<p class="hotel-information">
+        		    		Offering stunning views of Monterey Bay, a full-service spa and a private beach, Golden Rose California is located only steps from Cannery Row and 10 minutes' walk from the Monterey Bay Aquarium.
+        		    		<br>
+        		    		<br>
+        		    		The guestrooms offer a seating area, air conditioning, a TV with cable channels, and an electronics charging station. The en suite bathroom includes free toiletries, bathrobes, a hairdryer, and ironing facilities. Guests can also enjoy nightly turndown service.
+        					<br>
+        		    		<br>Area: 50.000 m2
+        					<br>Category: 5 Stars
+        					<br>Year of construction: 2016
+
+        		    	</p>
+        			</div>
+        		  </div>
+        		</div>
+        	</div>
+
+        	<div class="rooms container" style="width: 100%">
+        		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 room-row row">
+        			<div class="col-lg-4 card-hold">
+        				<a href="" data-bs-toggle="modal" data-bs-target="#modal-single-room">
+        					<div class="card">
+        						<div class="card-img">
+        							<img src="images/rooms/single.jpg">
+        						</div>
+        						<div class="card-title">
+        							<h5>
+        								Single Room
+        							</h5>
+        						</div>
+        						<div class="card-info">
+        							<table>
+        								<tr>
+        									<td class="left-column">
+        										Size:
+        									</td>
+        									<td class="right-column">
+        										10 m <sup>2</sup>
+        									</td>
+        								</tr>
+        								<tr>
+        									<td class="left-column">
+        										Capacity:
+        									</td>
+        									<td class="right-column">
+        										1 person
+        									</td>
+        								</tr>
+										<tr>
+        									<td class="left-column">
+        										Features:
+        									</td>
+        									<td class="right-column">
+        										1 bed, desk, TV
+        									</td>
+        								</tr>
+        							</table>
+        						</div>
+        					</div>
+        				</a>
+        			</div>
+        			<div class="col-lg-4 card-hold">
+        				<a href="">
+        					<div class="card">
+        						<div class="card-img">
+        							<img src="images/rooms/double.jpg">
+        						</div>
+        						<div class="card-title">
+        							<h5>
+        								Double Room
+        							</h5>
+        						</div>
+        						<div class="card-info">
+        							<table>
+        								<tr>
+        									<td class="left-column">
+        										Size:
+        									</td>
+        									<td class="right-column">
+        										10 m <sup>2</sup>
+        									</td>
+        								</tr>
+        								<tr>
+        									<td class="left-column">
+        										Capacity:
+        									</td>
+        									<td class="right-column">
+        										1 person
+        									</td>
+        								</tr>
+										<tr>
+        									<td class="left-column">
+        										Features:
+        									</td>
+        									<td class="right-column">
+        										1 bed, desk, TV
+        									</td>
+        								</tr>
+        							</table>
+        						</div>
+        					</div>
+        				</a>
+        			</div>
+        			<div class="col-lg-4 card-hold">
+        				<a href="">
+        					<div class="card">
+        						<div class="card-img">
+        							<img src="images/rooms/single-business.jpg">
+        						</div>
+        						<div class="card-title">
+        							<h5>
+        								Single Business
+        							</h5>
+        						</div>
+        						<div class="card-info">
+        							<table>
+        								<tr>
+        									<td class="left-column">
+        										Size:
+        									</td>
+        									<td class="right-column">
+        										10 m <sup>2</sup>
+        									</td>
+        								</tr>
+        								<tr>
+        									<td class="left-column">
+        										Capacity:
+        									</td>
+        									<td class="right-column">
+        										1 person
+        									</td>
+        								</tr>
+										<tr>
+        									<td class="left-column">
+        										Features:
+        									</td>
+        									<td class="right-column">
+        										1 bed, desk, TV
+        									</td>
+        								</tr>
+        							</table>
+        						</div>
+        					</div>
+        				</a>
+        			</div>
+        			<div class="col-lg-4 card-hold">
+        				<a href="">
+        					<div class="card">
+        						<div class="card-img">
+        							<img src="images/rooms/single-with-pool.jpg">
+        						</div>
+        						<div class="card-title">
+        							<h5>
+        								Single with Pool
+        							</h5>
+        						</div>
+        						<div class="card-info">
+        							<table>
+        								<tr>
+        									<td class="left-column">
+        										Size:
+        									</td>
+        									<td class="right-column">
+        										10 m <sup>2</sup>
+        									</td>
+        								</tr>
+        								<tr>
+        									<td class="left-column">
+        										Capacity:
+        									</td>
+        									<td class="right-column">
+        										1 person
+        									</td>
+        								</tr>
+										<tr>
+        									<td class="left-column">
+        										Features:
+        									</td>
+        									<td class="right-column">
+        										1 bed, desk, TV
+        									</td>
+        								</tr>
+        							</table>
+        						</div>
+        					</div>
+        				</a>
+        			</div>
+        			<div class="col-lg-4 card-hold">
+        				<a href="">
+        					<div class="card">
+        						<div class="card-img">
+        							<img src="images/rooms/luxury.jpg">
+        						</div>
+        						<div class="card-title">
+        							<h5>
+        								Luxury
+        							</h5>
+        						</div>
+        						<div class="card-info">
+        							<table>
+        								<tr>
+        									<td class="left-column">
+        										Size:
+        									</td>
+        									<td class="right-column">
+        										10 m <sup>2</sup>
+        									</td>
+        								</tr>
+        								<tr>
+        									<td class="left-column">
+        										Capacity:
+        									</td>
+        									<td class="right-column">
+        										1 person
+        									</td>
+        								</tr>
+										<tr>
+        									<td class="left-column">
+        										Features:
+        									</td>
+        									<td class="right-column">
+        										1 bed, desk, TV
+        									</td>
+        								</tr>
+        							</table>
+        						</div>
+        					</div>
+        				</a>
+        			</div>
+        			<div class="col-lg-4 card-hold">
+        				<a href="">
+        					<div class="card">
+        						<div class="card-img">
+        							<img src="images/rooms/single-unusual.jpg">
+        						</div>
+        						<div class="card-title">
+        							<h5>
+        								Single Comfort
+        							</h5>
+        						</div>
+        						<div class="card-info">
+        							<table>
+        								<tr>
+        									<td class="left-column">
+        										Size:
+        									</td>
+        									<td class="right-column">
+        										10 m <sup>2</sup>
+        									</td>
+        								</tr>
+        								<tr>
+        									<td class="left-column">
+        										Capacity:
+        									</td>
+        									<td class="right-column">
+        										1 person
+        									</td>
+        								</tr>
+										<tr>
+        									<td class="left-column">
+        										Features:
+        									</td>
+        									<td class="right-column">
+        										1 bed, desk, TV
+        									</td>
+        								</tr>
+        							</table>
+        						</div>
+        					</div>
+        				</a>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+
+		<section class="info" id="contact" style="margin: 0">
+        	<div class="section-title">
+        		<h3>
+        			Contact Information
+        		</h3>
+        	</div>
+        	<div class="contact-table">
+        		<ul class="nav nav-tabs" id="myTab" role="tablist">
+        		  <li class="nav-item" role="presentation">
+        		    <button class="nav-link active" id="antalya-tab" data-bs-toggle="tab" data-bs-target="#antalya-contact" type="button" role="tab" aria-controls="home" aria-selected="true">Antalya</button>
+        		  </li>
+        		  <li class="nav-item" role="presentation">
+        		    <button class="nav-link" id="dubai-tab" data-bs-toggle="tab" data-bs-target="#dubai-contact" type="button" role="tab" aria-controls="profile" aria-selected="false">Dubai</button>
+        		  </li>
+        		  <li class="nav-item" role="presentation">
+        		    <button class="nav-link" id="nursultan-tab" data-bs-toggle="tab" data-bs-target="#nursultan-contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Nur-Sultan</button>
+        		  </li>
+        		  <li class="nav-item" role="presentation">
+        		    <button class="nav-link" id="paris-tab" data-bs-toggle="tab" data-bs-target="#paris-contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Paris</button>
+        		  </li>
+        		  <li class="nav-item" role="presentation">
+        		    <button class="nav-link" id="california-tab" data-bs-toggle="tab" data-bs-target="#california-contact" type="button" role="tab" aria-controls="contact" aria-selected="false">California</button>
+        		  </li>
+        		</ul>
+        		<div class="tab-content" id="myTabContent">
+        		  <div class="tab-pane fade show active" id="antalya-contact" role="tabpanel" aria-labelledby="home-tab">
+        		  	<table>
+        		  		<tr>
+        					<td class="contact-name-column">
+        						Phone number:
+        					</td>
+        					<td>
+        						*Phone number*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Email:
+        					</td>
+        					<td>
+        						*Email*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Address:
+        					</td>
+        					<td>
+        						*Address*
+        					</td>
+        				</tr>
+        		  	</table>
+        		  </div>
+        		  <div class="tab-pane fade" role="tabpanel" id="dubai-contact" aria-labelledby="profile-tab">
+        		  	<table>
+        		  		<tr>
+        					<td class="contact-name-column">
+        						Phone number:
+        					</td>
+        					<td>
+        						*Phone number*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Email:
+        					</td>
+        					<td>
+        						*Email*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Address:
+        					</td>
+        					<td>
+        						*Address*
+        					</td>
+        				</tr>
+        		  	</table>
+        		  </div>
+        		  <div class="tab-pane fade" role="tabpanel" id="nursultan-contact" aria-labelledby="contact-tab">
+        		  	<table>
+        		  		<tr>
+        					<td class="contact-name-column">
+        						Phone number:
+        					</td>
+        					<td>
+        						*Phone number*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Email:
+        					</td>
+        					<td>
+        						*Email*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Address:
+        					</td>
+        					<td>
+        						*Address*
+        					</td>
+        				</tr>
+        		  	</table>
+        		  </div>
+        		  <div class="tab-pane fade" role="tabpanel" id="paris-contact" aria-labelledby="contact-tab">
+        		  	<table>
+        		  		<tr>
+        					<td class="contact-name-column">
+        						Phone number:
+        					</td>
+        					<td>
+        						*Phone number*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Email:
+        					</td>
+        					<td>
+        						*Email*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Address:
+        					</td>
+        					<td>
+        						*Address*
+        					</td>
+        				</tr>
+        		  	</table>
+        		  </div>
+        		  <div class="tab-pane fade" role="tabpanel" id="california-contact" aria-labelledby="contact-tab">
+        		  	<table>
+        		  		<tr>
+        					<td class="contact-name-column">
+        						Phone number:
+        					</td>
+        					<td>
+        						*Phone number*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Email:
+        					</td>
+        					<td>
+        						*Email*
+        					</td>
+        				</tr>
+        				<tr>
+        					<td class="contact-name-column">
+        						Address:
+        					</td>
+        					<td>
+        						*Address*
+        					</td>
+        				</tr>
+        		  	</table>
+        		  </div>
+        		</div>
+        	</div>
+        	<div class="social ">
+        		<div class="container">
+        			<div class="row">
+        			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 15px;">
+        				<h5>
+        					Golden Rose always provides the best service<br>
+        					follow us to stay updated
+        				</h5>
+        			</div>
+        			</div>
+        			<div class="row social-row">
+        				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 social-column">
+        					<a href="">
+        						<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        						  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+        						</svg>
+        					<h5>
+        						Career opportunities
+        					</h5>
+        					</a>
+        				</div>
+        				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 social-column">
+        					<a href="">
+        						<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        						  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+        						</svg>
+
+        					<h5>
+        						Events & Holidays
+        					</h5>
+        					</a>
+        				</div>
+        				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 social-column">
+        					<a href="">
+        						<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+        						  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+        						</svg>
+
+        					<h5>
+        						News
+        					</h5>
+        					</a>
+        				</div>
+        			</div>
+        		</div>
+
+        	</div>
+        </section>
+	</div>
+
+	<footer>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="height: 1.5px; background: #FFF;margin: auto;">
+
+    			</div>
+    			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+    				<img class="footer-logo" src="images/logo/logotext.png">
+    			</div>
+    			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="height: 1.5px; background: #FFF;margin: auto;">
+
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    				<p>© All Rights Reserved. <br> By Team 11. Nazarbayev University. 2021</p>
+    			</div>
+    		</div>
+    	</div>
+    </footer>
+
+
+</body>
+	<script type="text/javascript" src="javascript/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="javascript/script.js"></script>
+</html>
