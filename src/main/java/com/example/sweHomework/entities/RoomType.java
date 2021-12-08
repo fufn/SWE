@@ -14,6 +14,10 @@ import javax.persistence.*;
 public class RoomType {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "roomtype_id")
+    private Long id;
+
     @Column(name = "name")
     private String name;
 
