@@ -47,6 +47,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 logoutUrl("/tologout").
                 logoutSuccessUrl("/loginpage");
 
+        http.csrf().disable();
+
     }
 
     @Bean
