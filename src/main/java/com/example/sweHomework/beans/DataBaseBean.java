@@ -22,6 +22,9 @@ public class DataBaseBean{
     @Autowired
     private PhoneNumbersRepository phoneNumbersRepository;
 
+    @Autowired
+    private ReservationRepository reservationRepository;
+
     public List<Hotels> getAllHotels(){
         return hotelsRepository.findAll();
     }
