@@ -31,6 +31,21 @@ public class Users implements UserDetails {
     @Column(name = "full_name")
     private String full_name;
 
+    @Column(name = "id_type")
+    private String id_type;
+
+    @Column(name = "id_number")
+    private int id_number;
+
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "home_phone_number")
+    private String home_phone_number;
+
+    @Column(name = "mobile_phone_number")
+    private String mobile_phone_number;
+
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Roles> roles;
 
