@@ -35,7 +35,7 @@ public class Users implements UserDetails {
     private String id_type;
 
     @Column(name = "id_number")
-    private int id_number;
+    private String id_number;
 
     @Column(name = "address")
     private String address;

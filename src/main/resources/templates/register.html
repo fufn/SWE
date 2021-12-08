@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel = "stylesheet" type = "text/css" th:href="@{'/style/bootstrap.min.css'}">
+    </head>
+    <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(21,9,66,0.83)" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{'/'}">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row mt-3">
+        <div class="col-6 mx-auto">
+            <h3 class="mb-3">SIGN UP</h3>
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert" th:if = "${param.success!=null}">
+                User added successfully!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" th:if = "${param.emailerror!=null}">
+                User email already exists!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" th:if = "${param.passworderror!=null}">
+                Passwords are not same!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <form th:action="@{'/toregister'}" method="post">
+                <div class="mt-2">
+                    <label>EMAIL: </label>
+                    <input type="email" class="form-control mt-2" name="user_email" required>
+                </div>
+                <div class="mt-2">
+                    <label>PASSWORD: </label>
+                    <input type="password" class="form-control mt-2" name="user_password" required>
+                </div>
+                <div class="mt-2">
+                    <label>RETYPE PASSWORD: </label>
+                    <input type="password" class="form-control mt-2" name="user_repassword" required>
+                </div>
+                <div class="mt-2">
+                    <label>FULL NAME: </label>
+                    <input type="text" class="form-control mt-2" name="user_full_name" required>
+                </div>
+                <div class="mt-2">
+                    <label>ID TYPE: </label>
+                    <input type="text" class="form-control mt-2" name="id_type" required>
+                </div>
+                <div class="mt-2">
+                    <label>ID NUMBER: </label>
+                    <input type="text" class="form-control mt-2" name="id_number" required>
+                </div>
+                <div class="mt-2">
+                    <label>ADDRESS: </label>
+                    <input type="text" class="form-control mt-2" name="address" required>
+                </div>
+                <div class="mt-2">
+                    <label>HOME PHONE NUMBER: </label>
+                    <input type="text" class="form-control mt-2" name="home_phone_number" required>
+                </div>
+                <div class="mt-2">
+                    <label>MOBILE PHONE NUMBER: </label>
+                    <input type="text" class="form-control mt-2" name="mobile_phone_number" required>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-success">SIGN UP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+<script th:src="@{'/javascript/bootstrap.bundle.min.js'}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+<script type = "text/javascript" th:src = "@{'/javascript/jquery-2.2.1.min.js'}"></script>
+</html>
