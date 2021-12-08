@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Hotels</title>
-	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" th:href="@{'/style/bootstrap.min.css'}">
+	<link rel="stylesheet" type="text/css" th:href="@{'/style/font-awesome.min.css'}">
+	<link rel="stylesheet" type="text/css" th:href="@{'/style/style.css'}">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light justify-content-center" id="navigation">
@@ -33,7 +33,7 @@
     			</li>
     			<li class="nav-item">
     				<a href="">
-    					<img class="square-logo" src="images/logo/logo.png">
+    					<img class="square-logo" th:src="@{'images/logo/logo.png'}">
     				</a>
     			</li>
     			<li class="nav-item">
@@ -66,7 +66,7 @@
         <!-- The slideshow/carousel -->
         <div class="carousel-inner h-100">
           <div class="carousel-item active h-100">
-            <img src="images/hotels/kazion.jpg" alt="Antalya" class="d-block">
+            <img th:src="@{'images/hotels/kazion.jpg'}" alt="Antalya" class="d-block">
             <div class="hotel-info">
               <h1>
                 Golden Rose Antalya
@@ -75,7 +75,7 @@
             </div>
           </div>
           <div class="carousel-item h-100">
-            <img src="images/hotels/green.jpg" alt="Dubai" class="d-block">
+            <img th:src="@{'images/imageshotels/green.jpg'}" alt="Dubai" class="d-block">
             <div class="hotel-info">
               <h1>
                 Golden Rose Dubai
@@ -84,7 +84,7 @@
             </div>
           </div>
           <div class="carousel-item h-100">
-            <img src="images/hotels/purple.jpg" alt="Nur-Sultan" class="d-block">
+            <img th:src="@{'images/hotels/purple.jpg'}" alt="Nur-Sultan" class="d-block">
             <div class="hotel-info">
               <h1>
                 Golden Rose Nur-Sultan
@@ -93,7 +93,7 @@
             </div>
           </div>
           <div class="carousel-item h-100">
-            <img src="images/hotels/paris.jpg" alt="California" class="d-block">
+            <img th:src="@{'images/hotels/paris.jpg'}" alt="California" class="d-block">
             <div class="hotel-info">
               <h1>
                 Golden Rose Paris
@@ -102,7 +102,7 @@
             </div>
           </div>
           <div class="carousel-item h-100">
-            <img src="images/hotels/california.jpg" alt="California" class="d-block">
+            <img th:src="@{'images/hotels/california.jpg'}" alt="California" class="d-block">
             <div class="hotel-info">
               <h1>
                 Golden Rose California
@@ -222,7 +222,7 @@
         				<a href="" data-bs-toggle="modal" data-bs-target="#modal-single-room">
         					<div class="card">
         						<div class="card-img">
-        							<img src="images/rooms/single.jpg">
+        							<img th:src="@{'images/rooms/single.jpg'}">
         						</div>
         						<div class="card-title">
         							<h5>
@@ -264,7 +264,7 @@
         				<a href="">
         					<div class="card">
         						<div class="card-img">
-        							<img src="images/rooms/double.jpg">
+        							<img th:src="@{'images/rooms/double.jpg'}">
         						</div>
         						<div class="card-title">
         							<h5>
@@ -306,7 +306,7 @@
         				<a href="">
         					<div class="card">
         						<div class="card-img">
-        							<img src="images/rooms/single-business.jpg">
+        							<img th:src="@{'images/rooms/single-business.jpg'}">
         						</div>
         						<div class="card-title">
         							<h5>
@@ -348,7 +348,7 @@
         				<a href="">
         					<div class="card">
         						<div class="card-img">
-        							<img src="images/rooms/single-with-pool.jpg">
+        							<img th:src="@{'images/rooms/single-with-pool.jpg'}">
         						</div>
         						<div class="card-title">
         							<h5>
@@ -390,7 +390,7 @@
         				<a href="">
         					<div class="card">
         						<div class="card-img">
-        							<img src="images/rooms/luxury.jpg">
+        							<img th:src="@{'images/rooms/luxury.jpg'}">
         						</div>
         						<div class="card-title">
         							<h5>
@@ -432,7 +432,7 @@
         				<a href="">
         					<div class="card">
         						<div class="card-img">
-        							<img src="images/rooms/single-unusual.jpg">
+        							<img th:src="@{'images/rooms/single-unusual.jpg'}">
         						</div>
         						<div class="card-title">
         							<h5>
@@ -698,7 +698,7 @@
 
     			</div>
     			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-    				<img class="footer-logo" src="images/logo/logotext.png">
+    				<img class="footer-logo" th:src="@{'images/logo/logotext.png'}">
     			</div>
     			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="height: 1.5px; background: #FFF;margin: auto;">
 
@@ -714,7 +714,7 @@
 
 
 </body>
-	<script type="text/javascript" src="javascript/jquery-2.2.1.min.js"></script>
-	<script type="text/javascript" src="javascript/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="javascript/script.js"></script>
+	<script type="text/javascript" th:src="@{'/javascript/jquery-2.2.1.min.js'}"></script>
+	<script type="text/javascript" th:src="@{'/javascript/bootstrap.bundle.min.js'}"></script>
+	<script type="text/javascript" th:src="@{'/javascript/script.js'}"></script>
 </html>

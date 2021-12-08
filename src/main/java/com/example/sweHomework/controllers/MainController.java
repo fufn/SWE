@@ -16,4 +16,9 @@ public class MainController {
         return ("secondPage");
     }
 
+    @GetMapping(value = "/index")
+    public String index(){
+        return ("index");
+    }
+
 }
