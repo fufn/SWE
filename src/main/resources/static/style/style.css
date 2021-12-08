@@ -81,6 +81,10 @@ a:hover {
     color: rgba(249,249,249,.9);
 }
 
+.navbar-nav {
+	flex-wrap: nowrap;
+}
+
 .navbar-light .navbar-nav .nav-link {
 	margin: 28px 25px;
     color: rgba(249,249,249,.55);
@@ -374,4 +378,73 @@ footer p {
 	color: #dedede;
 	margin-top: 15px;
 	margin-bottom: 0;
+}
+
+.profile-form {	
+    margin: 0px auto;
+    background: #3f454f;
+    color: #FFF;
+    padding: 40px;
+    box-shadow: 0px 0px 10px #333333aa;
+    text-align: center;
+}
+
+.profile-form div input:not([type=submit]) {
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    line-height: 25px;
+    width: 100%;
+    letter-spacing: 1.5px;
+    background: transparent;
+    color: #FFF;
+}
+
+.profile-form .div-input {
+	padding: 5px;
+	text-align: left;
+}
+
+.profile-form .div-input label {
+	margin-top: 10px;
+}
+
+.profile-form div input[type=submit] {
+    padding: 3px 15px;
+    background-color: #feeef2;
+    border: 1px solid #000000;
+    color: #000;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.profile-form div input:not([type=submit])::placeholder {
+    color: #ababab;
+}
+
+
+.profile-form div input[type=submit]:hover {
+    box-shadow: 0px 0px 15px #EFEFEFab;
+}
+
+.div-input select {
+	color: #FFF;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    line-height: 25px;
+    width: 100%;
+    letter-spacing: 1.5px;
+    background: transparent;
+}
+
+.div-input select option {
+	color: #000;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    line-height: 25px;
+    width: 100%;
+    letter-spacing: 1.5px;
+    background: transparent;
 }
