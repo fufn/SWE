@@ -16,7 +16,7 @@
                 </a> -->
             </div>
             <div class="col-lg-8 navbar-nav-center">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" th:href="@{'/'}">← To the main page</a>
                     </li>
@@ -24,30 +24,15 @@
                         <a class="nav-link" th:href="@{'/profile'}">My Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a h:href="@{/}">
-                            <img class="square-logo" src="../static/images/logo/logo.png" th:src="@{'images/logo/logo.png'}">
+                        <a th:href="@{/}">
+                            <img class="square-logo"  th:src="@{'images/logo/logo.png'}">
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" th:href="@{'/myreservations'}">My Reservations</a>
+                        <a class="nav-link active" th:href="@{'/myreservations'}">All Reservations</a>
                     </li>
-                    <li class="nav-item" sec:authorize="hasAnyRole('ROLE_GUEST')">
-                        <a class="nav-link" href="JavaScript:void(0)" onclick="logout()">Logout</a>
-                    </li>
-                    <script type="text/javascript">
-                        function logout(){
-                            document.getElementById("logoutFormId").submit();
-                        }
-                    </script>
-                    <form th:action="@{'/tologout'}" method="post" id = "logoutFormId"></form>
                 </ul>
             </div>
-            <div class="col-lg-2 navbar-nav-right" sec:authorize="hasAnyRole('ROLE_GUEST')">
-                <a class="nav-link login" th:href="@{'/makereservation'}">
-                    Make a reservation
-                </a>
-            </div>
-
         </nav>
 
         
@@ -56,6 +41,10 @@
             <div class="profile-form row" style="">
                 <div class="div-title">
                     <h3>My Reservations</h3>
+                </div>
+                <div class="alert alert-success alert-dismissible fade show" role="alert" th:if = "${param.success!=null}">
+                    Reservation deleted successfully!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <table>
                     <tr>
@@ -71,12 +60,27 @@
                         <th>
                             Check out
                         </th>
+                        <th>
+                            User Name
+                        </th>
+                        <th>
+                            Delete
+                        </th>
                     </tr>
                     <tr th:each = "res : ${reservations}">
                         <td th:text = "${res.hotels.name}"></td>
                         <td th:text = "${res.roomType.name}"></td>
                         <td th:text = "${res.check_in}"></td>
                         <td th:text = "${res.check_out}"></td>
+                        <td th:text = "${res.users.full_name}"></td>
+                        <td>
+                            <form th:action="@{/delete}" th:method="post">
+                                <button>
+                                    Delete
+                                </button>
+                                <input type = "hidden" th:value="${res.id}" name = "id">
+                            </form>
+                        </td>
                     </tr>
                 </table>
                 
@@ -84,4 +88,7 @@
         </div>
 
     </body>
+    <script type="text/javascript" th:src="@{'/javascript/jquery-2.2.1.min.js'}"></script>
+    <script type="text/javascript" th:src="@{'/javascript/bootstrap.bundle.min.js'}"></script>
+    <script type="text/javascript" th:src="@{'/javascript/script.js'}"></script>
 </html>

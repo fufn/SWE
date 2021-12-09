@@ -24,7 +24,7 @@
                         <a class="nav-link" th:href="@{'/profile'}">My Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">
+                        <a th:href="@{'/'}">
                             <img class="square-logo" src="../static/images/logo/logo.png" th:src="@{'images/logo/logo.png'}">
                         </a>
                     </li>
@@ -96,4 +96,7 @@
         </div>
 
     </body>
+    <script type="text/javascript" th:src="@{'/javascript/jquery-2.2.1.min.js'}"></script>
+    <script type="text/javascript" th:src="@{'/javascript/bootstrap.bundle.min.js'}"></script>
+    <script type="text/javascript" th:src="@{'/javascript/script.js'}"></script>
 </html>

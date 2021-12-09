@@ -71,6 +71,23 @@ public class MainController {
         return "myreservations";
     }
 
+    @GetMapping(value = "/adminpanel")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    public String adminpanel(Model model){
+        model.addAttribute("CURRENT_USER", getUser());
+        List<Reservation> reservations = reservationRepository.findAll();
+        model.addAttribute("reservations", reservations);
+        return "adminpanel";
+    }
+
+    @PostMapping(value = "/delete")
+    @PreAuthorize("isAuthenticated()")
+    public String delete(Model model,
+                         @RequestParam(name = "id") Long id){
+        reservationRepository.deleteById(id);
+        return "redirect:/adminpanel?success";
+    }
+
     @GetMapping(value = "/makereservation")
     @PreAuthorize("isAuthenticated()")
     public String makereservation(Model model){
