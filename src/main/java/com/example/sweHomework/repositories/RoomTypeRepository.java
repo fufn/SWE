@@ -8,5 +8,5 @@ import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public interface RoomTypeRepository extends JpaRepository<RoomType, String> {
+public interface RoomTypeRepository extends JpaRepository<RoomType, Long> {
 }
